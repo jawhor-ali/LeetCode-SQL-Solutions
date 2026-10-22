@@ -1,8 +1,8 @@
 # Write your MySQL query statement below
 WITH department_count AS (
-    SELECT e1.employee_id, COUNT(e1.department_id) AS depart_count
-    FROM employee e1
-    GROUP BY e1.employee_id
+    SELECT employee_id, COUNT(department_id) AS depart_count
+    FROM employee
+    GROUP BY employee_id
 )
 SELECT e1.employee_id, e1.department_id 
 FROM employee e1
